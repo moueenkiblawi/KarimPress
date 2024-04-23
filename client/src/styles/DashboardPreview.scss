@@ -1,0 +1,45 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+.app__dashboard{
+    width: 70%;
+    position: absolute;
+    bottom: -85%;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+
+    img{
+        width: 100%;
+        border-radius: 40px;
+        box-shadow: $shadow;
+    }
+}
+
+@media only screen and (max-width:1022px){
+
+    .app__dashboard{
+        bottom: -5%;
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width:600px){
+
+    .app__dashboard{
+        bottom: 2%;
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width:420px){
+
+    .app__dashboard{
+        bottom: 12%;
+        width: 95%;
+    }
+
+}

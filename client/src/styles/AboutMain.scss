@@ -1,0 +1,75 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+
+.aboutMain{
+    // background-color: #0c1727;
+    padding: 60px 0;
+.aboutHero__container{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 10px 30px;
+
+
+
+    .left__aboutHero{
+        flex: 1.5;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        img{
+
+            height: 30rem;
+            width: 100%;
+            border-radius: 20px;
+        
+        }
+    }
+
+
+    .right__aboutHero{
+        flex: 1.5;
+        @include flexDirection;
+        gap: $lg-gap;
+        padding:20px 20px;
+        height: fit-content;
+        margin-right: 20px;
+        position: relative;
+        left:  100px;
+        border-radius: 10px;
+        align-self: center;
+        // background-color: #0c1727;
+        // box-shadow: 2px 2px 2px 2px gray;
+
+
+        .right__aboutHero__text{
+            gap: 2rem;
+            @include flexDirection;
+            align-items: center;
+
+            h1{
+                width: 200px;
+                align-items: center;
+                display: flex;
+                color: $logo-color;
+                justify-content: center;
+            }
+            p{
+                color: $neutral-color;
+                font-size: 14px;
+            }
+
+
+
+            
+
+            
+        }
+       
+    }
+}
+
+}
+

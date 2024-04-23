@@ -1,0 +1,103 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+.app__distribution{
+    padding: 55% $md-gap 10% $md-gap;
+
+
+    .distirbution__container{
+        display:flex;
+      gap: $lg-gap;
+    }
+
+    .left__distribution{
+        flex:1;
+        @include flexDirection;
+        gap: 5rem;
+
+
+        .distribution__text{
+            @include flexDirection;
+            gap: 4rem;
+            color: $primary-color;
+            
+            h1{
+                font-size: 4rem;
+                line-height: 4rem;
+                span{
+            color: $logo-color;                }
+            }
+
+            p{
+                font-size: 18px;
+            }
+        }
+        .distribution__button{
+            @include flexAlign;
+            gap: $lg-gap;
+            
+            button{
+                @include button;background: $primary-color;
+                color: $secondary-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+            
+                &:hover{
+                    background: $text-gradient;           
+                 }
+            }
+           
+        }
+    }
+
+    .right__distribution{
+        flex:2rem 2rem;
+       
+        img{
+            width: 40rem;
+             height: 40rem;
+             border-radius: 20px;
+                box-shadow: $shadow;
+        }
+    }
+}
+
+
+@media only screen and (max-width:600px){
+.app__distribution{
+    padding-top: 65rem;
+    padding-left: 0;
+    padding-right: 0;
+    .distirbution__container{
+        flex-direction: column;
+        gap: 7rem;
+    }
+    .left__distribution{
+        margin-left: 20px;
+        .distribution__text{
+            h1{
+                font-size: 2rem;
+            }
+            P{
+                font-size: 14px;
+            }
+        }
+        .distribution__button{
+            button{
+                font-size: 14px;
+            }
+        }
+    }
+    .right__distribution{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        img{
+            width: 70%;
+            height: 60%;
+        }
+    }
+}
+}

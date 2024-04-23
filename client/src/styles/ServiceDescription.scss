@@ -1,0 +1,114 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+
+
+
+.serviceDescription{
+
+    .serviceDescription__header{
+
+        background-image: url('../assets/background4.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        height: 40vh;
+        color: $logo-color;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        text-align: center;
+
+        p{
+            
+                color: white;
+        }
+        span{
+            color: white;
+        }
+        .title{
+            color: $secondary-logo-color;
+        }
+    }
+
+    .serviceDescription__wrapper{
+        display: flex;
+        flex-direction: row;
+        padding: 30px 30px;
+
+
+        .left__serviceDescription{
+        flex: 1.5;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        img{
+
+            height: 30rem;
+            width: 100%;
+            border-radius: 20px;
+        
+        }
+        }
+
+        .right__serviceDescription{
+            flex: 1.5;
+        @include flexDirection;
+        gap: $lg-gap;
+        padding:20px 20px;
+        height: fit-content;
+        margin-right: 20px;
+        position: relative;
+        left: -100px;
+        align-self: center;
+        background-color: #fff;
+        box-shadow: 0 2px 20px 2px gray;
+
+        .serviceDescription__right__text{
+            gap: 2rem;
+            @include flexDirection;
+            align-items: center;
+
+            h1{
+                // border-bottom: 4px solid #0c1727;
+                width: auto;
+                align-items: center;
+                color: $logo-color;
+                display: flex;
+                justify-content: center;
+            }
+            p{
+                color: $secondary-logo-color;
+                font-size: 15px;
+            }
+
+        }
+        }
+        
+}
+
+.serviceSubDescription{
+    padding: 70px 10px;
+
+    .serviceSub{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        h2{
+            color: $primary-color;
+            font-size: 40px;
+            padding: 0 15px;
+            border-left: 6px solid $logo-color;
+            border-right: 6px solid $logo-color;
+    
+        }
+    }
+  
+    
+    .serviceCard__container{
+        min-height: 30vh;
+    }
+}
+}

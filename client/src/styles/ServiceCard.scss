@@ -1,0 +1,119 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+
+
+.serviceCard__container{
+    min-height: 100vh;
+    
+
+
+    .serviceCard__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        
+    
+
+        .serviceCard__card{
+            flex: 1 1 300px;
+            text-align: center;
+            background-color: #fff ;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0,0,0,.3);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+            
+
+            &:hover{
+                i{
+                    color: white;
+                }
+                .serviceCard__text{
+                    h3{
+                        color:white ;
+                    }
+                }
+                .serviceCard__link{
+                    button{
+                        background-color: #fff;
+                        color: $logo-color;
+                    }
+                }
+                
+                &::before{
+                    clip-path: circle(100%);
+                }
+            }
+            &::before{
+
+                content: '';
+                position: absolute;
+                top: 0;left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                transition: .3s linear;
+                background: $logo-color;
+                clip-path: circle(28% at 5% 0);
+
+               
+            }
+
+            i{
+                box-shadow: 0 5px 10px rgba(0,0,0,.3);
+
+                font-size: 30px;
+                height: 60px;
+                width: 60px;
+                line-height: 80px;
+                color: $logo-color;
+                border-radius: 50%;
+                margin: 10px 0;
+                align-items: center;
+                display: inline-grid;
+                justify-content: center;
+                padding: 0px 11px;
+            }
+            .number{
+                position: absolute;
+                top: 10px;
+                left: 23px;
+                color: #fff;
+                font-weight: bolder;
+                font-size: 35px;
+            
+            }
+            .serviceCard__text{
+                display: flex;
+                gap: 8px;
+                flex-direction: column;
+            
+            h3{
+                font-size: 20px;
+                color: $secondary-logo-color;
+            }
+            p{
+                color: $neutral-color;
+            }
+            
+        }
+        .serviceCard__link{
+            margin-top: 15px;
+            
+            button{
+                @include button;
+                background-color: $logo-color;
+                color: #fff;
+            }
+        }
+        }
+    }
+
+
+
+}
+

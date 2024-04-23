@@ -1,0 +1,97 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+
+
+.app-service{
+  
+    .app__navbar{
+        background-color: transparent;
+        position: absolute;
+
+    }
+}
+
+.service__header{
+    background-image: url("../assets/background6.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 40vh;
+    color: white;
+    display: flex;
+    justify-content: right;
+    align-items: center;  
+    text-align: center;
+}
+
+.card{
+    padding: 100px 10rem;
+    // background: #0c1727;
+}
+
+.counter__service{
+    background-image: url("../assets/grungy_background-wallpaper-1024x576.jpg");    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 40vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.service__feature{
+    .app__feature {
+         background-color: white; 
+        color: white;
+        position: relative;
+        height: 120vh;
+
+
+       .right__feature {
+       .right__text h2 {
+            color: $primary-color;
+            font-size: 3rem;
+        }
+    
+        .feature__content{
+            .feature__text{
+                p{
+                    color: $primary-color;
+                }
+            }
+        }
+    
+    }
+    }
+}
+
+
+@media only screen and (max-width:800px){
+
+    .card{
+        padding: 100px 3rem;
+    }
+    
+}
+
+@media only screen and (max-width:800px){
+
+    .card{
+        padding: 100px 3rem;
+    }
+    
+}
+
+@media only screen and (max-width:450px){
+
+    .app-service{
+        .footer{
+            margin-top: 21rem;
+        }
+    }
+    
+}

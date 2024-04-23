@@ -1,0 +1,238 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+
+.app__feature{
+    background-color: $primary-color;
+  color: white;
+//   padding: $md-gap $md-gap 20% $md-gap;
+  position: relative;
+  height: 140vh;
+    .feature__container{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 0;
+    }
+    
+    .left__feature{
+        flex: 1rem;
+        align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 6rem;
+
+        img{
+            border-radius: 26px;
+    width: 80%;
+    height: 100%;
+        }
+
+       
+       
+    }
+    .right__feature{
+        flex: 1rem;
+        gap: $lg-gap;
+        @include flexDirection;
+        margin-top: 5rem;
+
+        .right__text{
+            gap: $lg-gap;
+            @include flexDirection;
+
+            h2{
+                color: white;        
+                font-size: 3rem;
+                line-height: 50px;
+                span{
+                    color: $logo-color;
+                }
+            }
+            p{
+                font-size: 1.3rem;
+                color: $neutral-color;
+            }
+        }
+
+
+        .feature__content{
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            gap: $lg-gap;
+
+            .feature{
+                @include flexRow;
+                gap: $sm-gap;
+
+                svg{
+                    height: 20px;
+                    min-width: 20px;
+                    border-radius: 5px;
+                    background: $logo-color;
+
+                    &:hover{
+                        background: $secondary-logo-color;
+                    }
+
+                }
+
+                .feature__text{
+                    color: $secondary-color;
+                    font-weight: bold;
+
+                    span{
+                        color: $neutral-color;
+                    }
+                }
+            }
+
+        }
+     }
+}
+
+// @media only screen and (max-width:1900px){
+//     .app__feature{
+//         height: 80vh;
+//     }}
+
+@media only screen and (max-width:1000px){
+.app__feature{
+    height: 85vh;
+    .left__feature{
+        img{
+            height: 100%;
+        }
+    }
+    .right__feature{
+        .right__text{
+            h2{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+            
+        }
+        .feature__content{
+            .feature{
+                .feature__text{
+                    p{
+                        font-size: 14px;
+                    }
+                    span{
+                        font-size: 12px;
+                    }
+                  
+                }
+                svg{
+                    height: 15px;
+                    min-width: 15px;
+                }
+            }
+        }
+    }
+}
+}
+
+@media only screen and (max-width:800px){
+    .app__feature{
+        height: 120vh;
+        .feature__container{
+            flex-direction: column;
+        }
+        .left__feature{
+            img{
+                height: 100%;
+            }
+        }
+        .right__feature{
+            padding-left: 5rem;
+    padding-right: 5rem;
+            .right__text{
+                h2{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+                
+            }
+            .feature__content{
+                .feature{
+                    .feature__text{
+                        p{
+                            font-size: 14px;
+                        }
+                        span{
+                            font-size: 12px;
+                        }
+                      
+                    }
+                    svg{
+                        height: 15px;
+                        min-width: 15px;
+                    }
+                }
+            }
+        }
+    }
+    }
+
+
+    
+@media only screen and (max-width:500px){
+    .app__feature{
+        height: 120vh;
+        .feature__container{
+
+        
+        .left__feature{
+            img{
+                height: 100%;
+            }
+        }
+        .right__feature{
+            padding-left: 3rem;
+    padding-right: 3rem;
+            .right__text{
+                h2{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 14px;
+                }
+                
+            }
+            .feature__content{
+                grid-template-columns: 1fr;
+                .feature{
+                    .feature__text{
+                        p{
+                            font-size: 14px;
+                        }
+                        span{
+                            font-size: 10px;
+                        }
+                      
+                    }
+                    svg{
+                        height: 15px;
+                        min-width: 15px;
+                    }
+                }
+            }
+        }
+    }}
+    }
+
+    @media only screen and (max-width:420px){
+        .app__feature{
+            height: 155vh;}}
+
+            @media only screen and (max-width:360px){
+                .app__feature{
+                    height: 190vh;}}
+
+
+                    

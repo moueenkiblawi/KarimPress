@@ -1,0 +1,104 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+.aboutUs__app{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+
+
+    .left__aboutUs{
+        background-image: url('../assets/backabout.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        display: flex;
+        flex: 1;
+
+
+        img{
+            width: 90%;
+            height: 80%;
+            position: relative;
+            display: flex;
+            align-self: center;
+            position: relative;
+            right:-90px;
+        }
+    }
+
+
+    .right__aboutUs{
+        flex: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 20px;
+
+
+
+        .right__aboutUs__text{
+            @include flexDirection;
+            margin-top: 10px;
+            gap: 1rem;
+            h1{
+                align-self: center;
+                font-family:'Times New Roman', Times, serif;
+                font-size: 40px;
+                @include textGradient;
+                font-weight: bold;
+            }
+            p{
+                font-size: medium;
+                color: $secondary-logo-color;
+            }
+        }
+
+        .right__aboutUs__wrapper{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+
+                .right__aboutUs__card{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1.5rem;
+                  
+                    &:hover{
+                       .right__aboutUs__icon{
+                        svg{
+                            color: $primary-color;
+                        }}
+                    }
+                .right__aboutUs__icon{
+                    font-size: 40px;
+                    display: flex;
+                    align-items: center;
+                    
+                    svg{
+                        color: $logo-color
+                    }
+                }
+
+
+                .card__text{
+                    text-align: left;
+                    @include flexDirection;
+                    gap: .2rem;
+                    p{
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: $primary-color;
+
+                    }
+                    span{
+                        font-size: 14px;
+                        color: $neutral-color;
+                    }
+                }
+                }
+        }
+    }
+}

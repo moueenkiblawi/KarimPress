@@ -1,0 +1,164 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+
+        .feature__control{
+            width: 70%;
+            position: absolute;
+            bottom: -50%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: $secondary-color;
+            padding: 3rem ;
+            color: black;
+            border-radius: 20px;
+            box-shadow: $shadow;
+            height: auto;
+            .control__container{
+                width: 100%;
+                @include flexDirection;
+                gap: $lg-gap;
+
+
+
+                .control__text{
+                    @include flexDirection;
+                    gap: $lg-gap;  
+                    text-align: center;
+                    
+                    h1{
+                        font-size: 4rem;
+                        color: $logo-color;
+                    }
+                    p{
+                        color: $neutral-color;
+                        font: 1.3rem;
+                            
+                    }
+
+
+                    button{
+                        background-color: $primary-color;
+                        @include button;
+                        width: fit-content;
+                        color: $secondary-color;
+                        align-self: center;
+                        &:hover{
+                            background: $text-gradient;
+                        }
+                    }
+                   
+                }
+
+                .control__content{
+                    display: grid;
+                    grid-template-columns:1fr 1fr 1fr ;
+                    gap: $lg-gap;
+
+                    .control{
+                       background: $primary-color;
+                       color: white;
+                       padding: 1rem;
+                       border-radius: 20px;
+                       display: flex;
+                       align-items: center;
+                       flex-direction: column;
+                       justify-content: center;
+                        gap: 1rem;
+                        
+                       .control__icon{
+                        width: 36px;
+                        height: 36px;
+                        background: $logo-color;
+                        box-shadow: $elementary-shadow;
+                        display: flex;
+                        border-radius: 50px;
+                        align-items: center;
+                        justify-content: center;
+                        svg{
+
+                        font-size: 20px;
+
+                        }
+                       }
+
+                       .control__text__content{
+                        text-align:center;
+                        @include flexAlign;
+                        flex-direction: column;
+                        gap: $sm-gap;
+
+                        p{
+                            font-size: 1.3rem;
+                            font-weight: bold;
+                        }
+                        span{
+                            color: $neutral-color;
+                            
+                        }
+                       }
+                    }
+                }
+            }
+
+    }
+
+
+
+    @media only screen and (max-width:800px) {
+        .feature__control{
+            width: 90%;
+            bottom: -65%;
+            padding: 1rem ;
+            
+            .control__container{
+            .control__content{
+                grid-template-columns: 1fr ;
+                padding: 0 3rem;
+            }}
+    }
+
+
+}
+
+@media only screen and (max-width:650px) {
+    .feature__control{
+        width: 90%;
+        bottom: -65%;
+        padding: 1rem ;
+        
+        .control__container{
+        .control__content{
+            grid-template-columns: 1fr ;
+            padding: 0 3rem;
+        }}
+}
+
+
+}
+
+@media only screen and (max-width:420px) {
+    .feature__control{
+        width: 90%;
+        bottom: -65%;
+        padding: 1rem ;
+        
+        .control__container{
+
+            .control__text{
+                h1{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        .control__content{
+            grid-template-columns: 1fr ;
+            padding: 0 3rem;
+        }}
+}
+
+
+}

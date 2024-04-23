@@ -1,0 +1,287 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+
+.app__home{
+    height: 130vh;
+    width: 100%;
+    background-color: $primary-color;
+    padding: $ex-gap $md-gap;
+    @include flexDirection;
+    gap: 3rem; 
+    position: relative;
+    overflow: hidden;                             
+    
+    .arrow{
+        border: 2px solid rgb(42,188,188);
+        border-radius: 50%;
+        background: transparent;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        position: absolute;
+        color: rgb(42,188,188);
+        z-index: 999;
+
+        &:hover{
+            color: $secondary-logo-color;
+
+        }
+
+    }
+
+    .next{
+        top: 45%;
+        right: 1.5rem;
+    }
+    .prev{
+        top: 45%;
+        left: 1.5rem;
+    }
+
+    .slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: all .5s ease;
+
+        img{
+            width: 100%;
+            height: 100%;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // background-size: cover;
+        }
+    }
+    .current{
+        opacity: 1;
+        transform: translateX(0);
+        width: 100%;
+        height: 100%;   
+
+    
+    .content{
+        position: absolute;
+        top: 12rem;
+        left: 12rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background: rgb(0 0 0 / 68%);
+        width: 70%;
+        padding: 3rem;
+        animation: slide-up 1s ease;
+        animation-fill-mode: forwards;
+        
+
+        @keyframes slide-up 
+        {
+            0%{
+                visibility: visible;
+                top: 12rem;
+            }
+
+            100%{
+                visibility: visible;
+                top: 12rem;
+            }
+            
+        }
+
+            .current .content{
+                opacity: 1;
+            }
+
+    
+    
+
+    .home__text{
+        text-align: center;
+
+        h1{
+            span{
+              color: $logo-color;
+              line-height: 100px;
+
+            }
+           
+            font-size: 5rem;     
+           }
+    }
+
+
+    .ticks__container{
+        @include flexCenter;
+        color: #fff;
+        gap: $lg-gap;
+   
+    p{
+        @include flexAlign;
+        gap: $t-gap;
+        color: #fff;
+    }
+    span{
+        @include flexCenter;
+        height: 20px;
+        width: 20px;
+        border-radius: 5px;
+        color: $secondary-color;
+        background: $logo-color;
+
+        &:hover{
+            background-color: $secondary-logo-color; 
+        }
+    }
+}
+
+
+
+.input__container{
+    @include inputContainer;
+    width: 60%;
+    color: #fff;
+
+    input{
+        color: #fff;
+        width: 100%;
+
+    }
+
+    button{
+        background-color:$logo-color;
+        width: 120px;
+        color: $secondary-color;
+    }
+    button:hover{
+        background-color: $secondary-logo-color;
+        color: $neutral;
+        font-size: 16px;
+    }
+}
+}
+}
+}
+
+.scroll-to-top-btn{
+    position: fixed;
+    z-index: 2;
+    right: 3rem;
+    bottom: 4rem;
+    border-radius: 50%;
+    height: 10%;
+    box-shadow: 0 8px 16px 0 rgba(105, 104, 104, 0.2);
+    background: $logo-color;
+    width: 5%;
+    font-weight: 500;
+    border: #fff;
+    color: #fff;
+    font-size: 30px;
+
+    &:hover{
+        background-color: $secondary-logo-color;
+    }
+}
+
+@media only screen and (max-width:1025px){
+
+    .app__home{
+        height: 80vh;
+
+        .home__text h1{
+            font-size: 3rem;
+        }
+        .input__container{
+            width: 70%;
+        }
+         .ticks__container p{
+            font-size: 15px;
+        }
+         .ticks__container span {
+            height: 15px;
+            width: 15px;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width:940px){
+
+    .app__home{
+        padding-left: 0;
+        padding-right: 0;
+
+        .home__text h1{
+            font-size: 5rem;
+        }
+        .input__container{
+            width: 50%;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width:700px){
+
+    .app__home{
+        height: 85vh;
+
+        .home__text h1{
+            font-size: 3rem;
+        }
+        .input__container{
+            width: 70%;
+        }
+    }
+
+}
+@media only screen and (max-width:420px){
+
+    .app__home{
+        height: 75vh;
+
+        .home__text h1{
+            font-size: 2rem;
+        }
+        .input__container{
+            width: 90%;
+        }
+        .ticks__container p{
+            font-size: 13px;
+        }
+         .ticks__container span {
+            height: 13px;
+            width: 13px;
+        }
+    }
+
+}
+@media only screen and (max-width:320px){
+
+    .app__home{
+       
+
+        .home__text h1{
+            font-size: 1.5rem;
+        }
+        .input__container{
+            width: 90%;
+            button{
+                padding: 0;
+            }
+        }
+        .ticks__container p{
+            font-size: 10px;
+        }
+         .ticks__container span {
+            height: 10px;
+            width: 10px;
+        }
+    }
+
+}

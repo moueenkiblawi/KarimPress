@@ -1,0 +1,45 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+
+.counter__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .counter__wrapper{
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+      
+        align-items: center;
+        justify-content: space-between;
+
+        .counter__item{
+            width: auto;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+
+            h3{
+                font-size: 2rem;
+            }
+                p{
+                    font-size: 1.5rem;
+                }
+
+        }
+    }
+
+}
+
+
+@media only screen and (max-width:515px){
+   .counter__container{
+    .counter__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }}
+}

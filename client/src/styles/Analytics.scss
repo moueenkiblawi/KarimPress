@@ -1,0 +1,184 @@
+@import "../styles/-variables.scss";
+@import "../styles/-constant.scss";
+
+.app__analytics{
+    height: fit-content;
+    background: $secondary-color;
+    padding: 35% $md-gap 10% $md-gap;
+
+    .analytics__container{
+        @include flexAlign;
+        gap: 4rem;
+
+        .left__analytics{
+            @include flexDirection;
+            
+            .left__text{
+                @include flexDirection;
+                gap:$lg-gap;
+                span{   
+                    color: $logo-color;
+                }
+                h1{
+                    font-size: 4rem;
+                    color: $primary-color;
+                    line-height: 70px;
+                }
+
+                p{
+                    color: $neutral-color;
+                    font-size: 1.3rem;
+                }
+            }
+            .left__analytics__container{
+                    @include flexAlign;
+                     margin-top: 80px;
+                     gap: 2rem;
+
+
+                    .analytic__container{
+                        @include flexAlign;
+                        flex-direction: column;
+                        gap: $lg-gap;
+                        cursor: pointer;
+                        color: $primary-color;
+                        font-weight: bold;
+                        gap: 2rem;
+
+
+                        .analytic__icon{
+                            height: 180px;
+                            width: 180px;
+                            border-radius: 20px;
+                            background: $primary-color;
+                            color: white;
+                            transition: $trans;
+                            font-size: 2rem;
+                            @include flexCenter;
+
+                            &:hover{
+                                // background:rgb(94, 93, 93);
+                                // box-shadow: $shadow;
+                                @include textGradient;
+                            }
+                        }
+                    }
+            }
+        }
+        .right__analytics{
+
+
+            img{
+                width: auto;
+                height: 45rem;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1230px){
+
+    .app__analytics{
+        
+        .analytics__container{
+           flex-direction: column;
+    
+            .left__analytics{
+              
+                
+                .left__text{
+                   
+                    
+                    h1{
+                        font-size: 3rem;
+                    }
+    
+                    p{
+                        color: $neutral-color;
+                        font-size: 1.3rem;
+                    }
+                }
+}
+.right__analytics{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    img{
+        width: 75%;
+    }
+}
+
+}}}
+
+@media only screen and (max-width:650px){
+    .app__analytics{
+        padding: 16rem 2rem;
+        .analytics__container{
+           flex-direction: column;
+    
+            .left__analytics{
+              
+                
+                .left__text{
+                   
+                    
+                    h1{
+                        font-size: 3rem;
+                    }
+    
+                    p{
+                        color: $neutral-color;
+                        font-size: 1.3rem;
+                    }
+                }
+                
+.left__analytics__container{
+    flex-direction: column;
+}
+
+}
+.right__analytics{
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+}}}
+
+@media only screen and (max-width:400px){
+    .app__analytics{
+        
+        .analytics__container{    
+            .left__analytics{
+                
+                
+                .left__text{
+                   
+                    
+                    h1{
+                        font-size: 2rem;
+                    }
+    
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+                .left__analytics__container{
+                    .analytic__container{
+                        .analytic__icon{
+                            height: 136px;
+    width: 150px;
+                        }
+                    }
+                }
+                
+
+
+
+}}}}
